@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Lato } from 'next/font/google'
+import Header from '@/components/header'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -18,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt" className={lato.className}>
+      <Header />
       <body className="antialiased">{children}</body>
     </html>
   )
